@@ -2,6 +2,8 @@ package com.tutorial.main;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
 
 public class BasicEnemy extends GameObject {
 
@@ -11,6 +13,10 @@ public class BasicEnemy extends GameObject {
 		velY = 5;
 	}
 
+	public Rectangle getBounds(){
+		return new Rectangle(x, y, 16, 16);
+	}
+	
 	public void tick() {
 		x += velX;
 		y += velY;
